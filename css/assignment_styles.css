@@ -6,12 +6,12 @@
 |   Mobile size: < 768px
 */
 :root{
-    --chicken-color:#0abab515;
-    --chicken-color-contrast:#0abab5;
+    --chicken-color:#93BFF215;
+    --chicken-color-contrast:#4F7BAE;
     --beef-color:#C7006715;
     --beef-color-contrast:#C70067;
     --sushi-color:#FEC50015;
-    --sushi-color-contrast:#FEC500;
+    --sushi-color-contrast:#D17000;
     --light-gray:#DDDDDD75;
     --dark-gray:#000000;
     --card-width:30%;
