@@ -1,8 +1,6 @@
 /*
 |
 |   CSS STYLESHEET FOR MODULE 2 ASSIGNMENT
-|   Classes prefixed with 'ASX'
-|   media queries merged into file
 |   
 |   Tablet size: 768-991px
 |   Mobile size: < 768px
@@ -24,15 +22,15 @@ body {
     font-size: var(--font-size);
     box-sizing: border-box;
 }
-.ASX-PAGE-HEADER{
+.PAGE-HEADER{
     margin:3em 0 3em 0;
 }
-.ASX-PAGE-HEADER-TITLE{
+.PAGE-HEADER-TITLE{
     width:100%;
     font-size: 1.75em; /* 175% */
     text-align:center;
 }
-.ASX-PAGE-BODY{
+.PAGE-BODY{
     display:flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -40,7 +38,7 @@ body {
     align-items:stretch;
     height:5em;
 }
-.ASX-CARD{
+.CARD{
     margin:1em;
     display:inline-block;
     flex-grow: 1;
@@ -49,12 +47,12 @@ body {
     border:solid 1px var(--dark-gray);
     border-radius:3px;
 }
-.ASX-CARD-TITLE{
+.CARD-TITLE{
     position:relative;
     width: 100%;
     height:2em;
 }
-.ASX-CARD-TITLE-CONTENT{
+.CARD-TITLE-CONTENT{
     position:absolute;
     right:0;
     width:8em;
@@ -66,12 +64,12 @@ body {
     font-size: 1.25em; /* 125% */
     text-align: center;
 }
-.ASX-CARD-BODY{
+.CARD-BODY{
     position:relative;
     margin:1em 0;
     padding:1em;
 }
-.ASX-CARD-BODY-CONTENT{
+.CARD-BODY-CONTENT{
     width:100%;
     margin: 0;
     padding: 0;
