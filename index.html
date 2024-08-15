@@ -3,52 +3,102 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <title>Module 2 Assignment</title>
+    <title>Module 3 Assignment</title>
     <!-- Style sheets -->
-    <link rel="stylesheet" href="css/assignment_styles.css">
+    <link media="all" type="text/css" rel="stylesheet" href="https://helixara.de/REPO/bootstrap/css/bootstrap.min.css">
+    <link media="all" type="text/css" rel="stylesheet" href="css/assignment_styles.css">
  </head>
-<body>
-<div class="PAGE-HEADER">
-    <h1 class="PAGE-HEADER-TITLE">Our Menu</h1>
+ <body>
+    <nav id="topOfPage"  class="navbar BG-SECONDARY">
+        <div class="container-fluid relative">
+            <a class="navbar-brand" href="#">Food, LLC</a>
+            <div class="d-sm-none">
+                <button class="navbar-toggler hlx-shadow-min border-1 BG-S-SECONDARY" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="navbar-toggler-icon p-0 W1EM "></span>
+                </button>
+                <ul class="dropdown-menu col-12 mt-2 px-2">
+                    <li class="BG-S-SECONDARY">
+                        <a class="dropdown-item text-center" href="#Chicken">Chicken</a>
+                    </li>
+                    <li class="BG-S-SECONDARY">
+                        <a class="dropdown-item text-center" href="#Beef">Beef</a>
+                    </li>
+                    <li class="BG-S-SECONDARY">
+                        <a class="dropdown-item text-center" href="#Sushi">Sushi</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+ <div class="d-block my-4">
+    <h1 class="col-12 text-center fs-2 fw-bold">Our Menu</h1>
 </div>
-<div class="PAGE-BODY">
-    <div class="CARD">
-        <div class="CARD-HEADER">
-            <div class="CARD-TITLE">
-                <h2 class="CARD-TITLE-CONTENT CHICKEN">Chicken</h2>
+<div class="d-flex flex-row flex-wrap justify-content-center">
+    <div class="col-xs-12 col-sm-6 col-md-4 d-flex flex-column justify-content-between align-items-stretch flex-grow-1 mx-0 mt-1 mb-3 px-2 ASX-CARD">
+        <div id="Chicken" class="d-flex flex-row align-items-center H3EM BG-SECONDARY">
+            <div class="row col-12 p-0 m-0 H2EM">
+                <h3 class="col-12 text-center fs-5">Chicken</h3>
             </div>
         </div>
-        <div class="CARD-BODY">
-            <p class="CARD-BODY-CONTENT">
+        <div class="d-flex flex-row justify-content-start flex-grow-1 p-4 BG-SECONDARY">
+            <p class="col-12 m-0 p-0 text-justify">
+                <span class="d-inline-block col-12 mb-2 fw-bold">Sizzling Fajita Fiesta</span>
+                <span class="d-inline-block col-12 mb-4">
                 Embark on a flavor adventure with our Sizzling Fajita Fiesta. Tender strips of chicken breast, marinated in a zesty blend of lime, chili, and cumin, are grilled to perfection alongside vibrant bell peppers and onions. Served on a cast-iron skillet with warm flour tortillas, fluffy rice, and a trio of house-made salsas, this dish invites you to create your own personalized fajita masterpiece.
+                </span>
+                <span class="d-inline-block col-12 mb-2 fw-bold">Lemon Herb Roasted Chicken</span>
+                <span class="d-inline-block col-12 mb-4">
+                Indulge in the comforting simplicity of our Lemon Herb Roasted Chicken. A whole chicken, infused with aromatic herbs and bright lemon zest, is slow-roasted until its skin turns golden brown and its meat becomes incredibly tender. Served with a medley of roasted root vegetables and a drizzle of pan jus, this dish is a celebration of classic flavors and wholesome ingredients.
+                </span>
             </p>
         </div>
+        <a href="#topOfPage" class="col-12 d-flex flex-row justify-content-center align-items-center text-decoration-none BG-S-SECONDARY H3EM ">
+            <span class="fs-6 fw-bold text-center text-black ">Back to top</span>
+        </a>
     </div>
-
-    <div class="CARD">
-        <div class="CARD-HEADER">
-            <div class="CARD-TITLE">
-                <h2 class="CARD-TITLE-CONTENT BEEF">Beef</h2>
+    <div class="col-xs-12 col-sm-6 col-md-4 d-flex flex-column justify-content-between align-items-stretch flex-grow-1 mx-0 mt-1 mb-3 px-2 ASX-CARD">
+        <div id="Beef" class="d-flex flex-row align-items-center H3EM BG-SECONDARY">
+            <div class="row col-12 p-0 m-0 H2EM">
+                <h3 class="col-12 text-center fs-5">Beef</h3>
             </div>
         </div>
-        <div class="CARD-BODY">
-            <p class="CARD-BODY-CONTENT">
+        <div class="d-flex flex-row justify-content-start flex-grow-1 p-4 BG-SECONDARY">
+            <p class="col-12 m-0 p-0 text-justify">
+                <span class="d-inline-block col-12 mb-2 fw-bold">Cowboy Ribeye</span>
+                <span class="d-inline-block col-12 mb-4">
+                Unleash your inner carnivore with our Cowboy Ribeye. This massive, bone-in ribeye steak, expertly aged and seasoned, is grilled to your desired temperature, showcasing its rich marbling and robust flavor. Served with a side of crispy onion rings and a dollop of creamy horseradish sauce, this dish is a true testament to the primal pleasure of a perfectly cooked steak.
+                </span>
+                <span class="d-inline-block col-12 mb-2 fw-bold">Bourguignon Rhapsody</span>
+                <span class="d-inline-block col-12 mb-4">
                 Embark on a culinary journey to the heart of France with our Bourguignon Rhapsody. Tender chunks of beef, slow-braised in red wine with aromatic herbs, bacon lardons, and earthy mushrooms, create a symphony of flavors that is both comforting and sophisticated. Served with creamy mashed potatoes, this dish is a timeless classic that captures the essence of French country cooking.
+                </span>
             </p>
         </div>
+        <a href="#topOfPage" class="col-12 d-flex flex-row justify-content-center align-items-center text-decoration-none BG-S-SECONDARY H3EM ">
+            <span class="fs-6 fw-bold text-center text-black ">Back to top</span>
+        </a>
     </div>
-
-    <div class="CARD">
-        <div class="CARD-HEADER">
-            <div class="CARD-TITLE">
-                <h2 class="CARD-TITLE-CONTENT SUSHI">Sushi</h2>
+    <div class="col-xs-12 col-sm-6 col-md-4 d-flex flex-column justify-content-between align-items-stretch flex-grow-1 mx-0 mt-1 mb-3 px-2 ASX-CARD">
+        <div id="Sushi" class="d-flex flex-row align-items-center H3EM BG-SECONDARY">
+            <div class="row col-12 p-0 m-0 H2EM">
+                <h3 class="col-12 text-center fs-5">Sushi</h3>
             </div>
         </div>
-        <div class="CARD-BODY">
-            <p class="CARD-BODY-CONTENT">
+        <div class="d-flex flex-row justify-content-start flex-grow-1 p-4 BG-SECONDARY">
+            <p class="col-12 m-0 p-0 text-justify">
+                <span class="d-inline-block col-12 mb-2 fw-bold">Dragon Roll</span>
+                <span class="d-inline-block col-12 mb-4">
                 Unleash your adventurous side with our Dragon Roll. This visually stunning creation features succulent shrimp tempura, creamy avocado, and crisp cucumber, all wrapped in nori and topped with a vibrant mosaic of thinly sliced avocado and a drizzle of sweet eel sauce. With its harmonious blend of textures and flavors, this roll is a feast for both the eyes and the palate.
+                </span>
+                <span class="d-inline-block col-12 mb-2 fw-bold">Omakase Extravaganza</span>
+                <span class="d-inline-block col-12 mb-4">
+                Surrender to the artistry of our sushi chefs with the Omakase Extravaganza. This multi-course tasting menu showcases the freshest seasonal ingredients and the most innovative sushi techniques. From delicate nigiri to intricate maki rolls, each dish is a testament to the chef's passion and skill. Embark on a culinary adventure that will tantalize your taste buds and leave you craving more.
+                </span>
             </p>
         </div>
+        <a href="#topOfPage" class="col-12 d-flex flex-row justify-content-center align-items-center text-decoration-none BG-S-SECONDARY H3EM ">
+            <span class="fs-6 fw-bold text-center text-black ">Back to top</span>
+        </a>
     </div>
 </div>
 <div class="PAGE-FOOTER">
@@ -56,8 +106,8 @@
 </div>
 
 
-<!-- Scripts -->
-<!-- NO JS-->
+    <!-- Scripts -->
+    <script src="https://helixara.de/REPO/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

@@ -14,6 +14,8 @@
     --sushi-color-contrast:#D17000;
     --light-gray:#DDDDDD75;
     --dark-gray:#000000;
+    --color-SECONDARY: var(--light-gray);
+    --color-ALERT: #FEC500;
     --card-width:30%;
     --font-size:14px;
 }
@@ -22,58 +24,26 @@ body {
     font-size: var(--font-size);
     box-sizing: border-box;
 }
-.PAGE-HEADER{
-    margin:3em 0 3em 0;
+.ASX-CARD{
+    height: 150vh;
 }
-.PAGE-HEADER-TITLE{
-    width:100%;
-    font-size: 1.75em; /* 175% */
-    text-align:center;
+.text-justify{
+    text-align:justify !important;
 }
-.PAGE-BODY{
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content:center;
-    align-items:stretch;
-    height:5em;
+.H2EM{
+    height: 2em !important;
 }
-.CARD{
-    margin:1em;
-    display:inline-block;
-    flex-grow: 1;
-    width: var(--card-width);
-    background-color:var(--light-gray);
-    border:solid 1px var(--dark-gray);
-    border-radius:3px;
+.H3EM{
+    height: 3em !important;
 }
-.CARD-TITLE{
-    position:relative;
-    width: 100%;
-    height:2em;
+.BG-SECONDARY {
+    background-color: var(--color-SECONDARY) !important;
 }
-.CARD-TITLE-CONTENT{
-    position:absolute;
-    right:0;
-    width:8em;
-    margin:0;
-    padding:0.5em 1em;
-    border:solid  var(--dark-gray);
-    border-width:0 0 1px 1px;
-    border-radius:0 3px;
-    font-size: 1.25em; /* 125% */
-    text-align: center;
+.BG-S-SECONDARY {
+    background-color: var(--color-SECONDARY);
 }
-.CARD-BODY{
-    position:relative;
-    margin:1em 0;
-    padding:1em;
-}
-.CARD-BODY-CONTENT{
-    width:100%;
-    margin: 0;
-    padding: 0;
-    text-align:justify;
+.BG-S-SECONDARY:hover {
+    background-color: var(--color-ALERT);
 }
 .CHICKEN{
     color: var(--chicken-color-contrast);
