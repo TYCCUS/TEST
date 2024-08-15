@@ -24,6 +24,11 @@ body {
     font-size: var(--font-size);
     box-sizing: border-box;
 }
+.navbar-toggler{
+    outline:none !important;
+    border:none !important;
+    box-shadow:none !important;
+}
 .ASX-CARD{
     height: 150vh;
 }
@@ -35,6 +40,9 @@ body {
 }
 .H3EM{
     height: 3em !important;
+}
+.W1EM{
+    width: 1em !important;
 }
 .BG-SECONDARY {
     background-color: var(--color-SECONDARY) !important;
