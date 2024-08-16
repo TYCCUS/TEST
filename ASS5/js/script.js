@@ -66,7 +66,12 @@ showLoading("#main-content");
 $ajaxUtils.sendGetRequest(allCategoriesUrl,buildAndShowHomeHTML,true);
 // Explicitly setting the flag to get JSON from server processed into an object literal
 });
-
+/*
+|
+|
+|ASSIGNMENT
+|
+*/
 // Builds HTML for the home page based on categories array returned from the server.
 function buildAndShowHomeHTML (categories) {
   // Load home snippet page
