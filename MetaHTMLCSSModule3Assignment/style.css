@@ -1,12 +1,122 @@
-#nav-menu-container li{
+
+main{
+min-height:initial !important;
+}
+.TXT-SHRUB-THIN {
+  font-family: "Montserrat", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 200 !important;
+  font-style: normal;
+}
+.TXT-SHRUB-LIGHT {
+  font-family: "Montserrat", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 400 !important;
+  font-style: normal;
+}
+.TXT-SHRUB-MED {
+  font-family: "Montserrat", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 600 !important;
+  font-style: normal;
+}
+.TXT-SHRUB-BOLD {
+  font-family: "Montserrat", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 800 !important;
+  font-style: normal;
+}
+.SHRUB-LIGHT {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.SHRUB-MED {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.SHRUB-BOLD {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+li{
     list-style-type: none;
-    width:125px;
-    min-height:50px;
-    display:flex;
-    flex-flow:column;
-    justify-content: center;
-    align-items: center;
-    margin:0;
-    padding:0;
-    position:relative;
+}
+a{
+    text-decoration: none;
+    color:var(--color-DARK);
+}
+#nav-menu-container li {
+  min-height: 50px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+#banner-promo-opacity-container {
+  background: var(--color-SECONDARY)
+    url("https://cdn.midjourney.com/829754c4-3ece-49f3-a7cc-21916d8a1e44/0_2.png")
+    center;
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.truncate {
+  position: relative;
+  --line-height: 1.1rem;
+  --lines-in-card: 3;
+  line-height: var(--line-height);
+  max-height: calc(var(--line-height) * var(--lines-in-card));
+  overflow: hidden;
+  background: var(--color-WHITE);
+  /* text-overflow: ellipsis; */
+}
+.truncate::before {
+    content: "→";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--color-WHITE);
+    padding-left:1em;
+}
+.truncate-overflow::after {
+  content: "";
+  position: absolute;
+  right: 0; /* note: not using bottom */
+  width: 1rem;
+  height: 1rem;
+  background: var(--color-WHITE);
+}
+.chevron {
+  border: solid var(--color-DARKMUTED);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.chevron.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.chevron.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+.chevron.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  margin:0 0 0.1em 0.1em;
+}
+
+.chevron.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  margin:0 0.1em 0.1em 0;
 }
