@@ -5,7 +5,7 @@ class Employee {
     static getNewIntern(name){
         const start = new Date()
         return{
-            name:name,
+            name,           // object property value shorthand -- so we do not repeat: name=name
             role:'intern',
             startDate:start.toLocaleDateString(),
         }
