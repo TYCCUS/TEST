@@ -7,7 +7,7 @@ class Employee {
         return{
             name,           // object property value shorthand -- so we do not repeat: name=name
             role:'intern',
-            startDate:start.toLocaleDateString(),
+            startDate:start.toLocaleDateString(),  // also (new Date).toDateString
         }
     }
 /*
