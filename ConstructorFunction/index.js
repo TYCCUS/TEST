@@ -12,7 +12,7 @@ Challenge:
 5. Check it’s working by creating several instances of 
    Character and adding items to their arrays.
 */
-function Character(name,collectedItemsArr=[]){
+function Character(name){
    this.name = name;
    this.collectedItemsArr = [];
    this.addItem = (item) => {
