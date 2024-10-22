@@ -1,14 +1,13 @@
 {
-  "name": "index",
-  "description": "FindEmployeeByIdRecursion",
+  "name": "findemployeebyidrecursion",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "vite",
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "vite": "latest"
-  },
-  "devDependencies": {}
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
