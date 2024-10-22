@@ -13,6 +13,7 @@
 <body>
     <div id="windowFrame" class="W100 H100 d-flex flex-row justify-content-start align-items-stretch">
         <div id="toolbar" CLASS="WR-100 H50PX d-flex flex-row justify-content-start align-items-center TOP-LEFT">
+            <button id="toggleMarginTop" class="btn SQUARE30PX FLEX-CENTER BG-SECONDARY br-5px shadow-S-INFO hlx-shadow-rmin me-2">↕️</button>
             <button id="300px" class="btn SQUARE30PX FLEX-CENTER BG-SECONDARY br-5px shadow-S-INFO hlx-shadow-rmin me-2">🦠</button>
             <button id="400px" class="btn SQUARE30PX FLEX-CENTER BG-SECONDARY br-5px shadow-S-INFO hlx-shadow-rmin me-2">s</button>
             <button id="800px" class="btn SQUARE30PX FLEX-CENTER BG-SECONDARY br-5px shadow-S-INFO hlx-shadow-rmin me-2">m</button>
@@ -22,7 +23,7 @@
             <button id="FULL" class="btn SQUARE30PX FLEX-CENTER BG-SECONDARY br-5px shadow-S-INFO hlx-shadow-rmin me-2">🎃</button>
             <button id="RELOAD" class="btn SQUARE30PX FLEX-CENTER BG-SECONDARY br-5px shadow-S-INFO hlx-shadow-rmin me-2">👽</button>
         </div>
-        <iframe src="/Throttling/" class="WR-100 overflow-y-scroll"></iframe>
+        <iframe src="/Debouncing/" class="WR-100 overflow-y-scroll"></iframe>
         <script src="https://tyccus.com/FLATFILES/GeneralAssets/BOOTSTRAP/js/bootstrap.bundle.min.js"></script>
         <script>
             console.log('initialized');
@@ -36,6 +37,7 @@
             document.getElementById('2000px').addEventListener('click',(event)=>{swapClass(viewport,wdth,'W2000PX');wdth='W2000PX'});
             document.getElementById('FULL').addEventListener('click',(event)=>{swapClass(viewport,wdth,'W100');wdth='W100'});
             document.getElementById('RELOAD').addEventListener('click',(event)=>{location.reload()});
+            document.getElementById('toggleMarginTop').addEventListener('click',(event)=>{viewport.classList.toggle('mt-5')});
             function swapClass(elements,oldClasses,newClasses){
                 const els = Array.isArray(elements) ? elements : [elements];
                 const oC = Array.isArray(oldClasses) ? oldClasses : oldClasses.split(',');
