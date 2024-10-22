@@ -26,12 +26,20 @@ class Character {
       this.isAlive = false;
     }
   }
-  // get isAlive(){
-  //   return this.isAlive;
-  // }
-  // set isAlive(){
-  //   return this.isAlive;
-  // }
+
+// set health(value) {
+//     this.#health = Math.max(0, value)
+// }
+
+// takeDamage(amount) {
+//     this.health -= amount
+// }
+
+// get isAlive() {
+//     return this.#health > 0
+// }
+
+
   getStatus() {
     return `${this.name} has ${this.#health} health and is ${this.isAlive ? 'alive' : 'dead'}`;
   }
