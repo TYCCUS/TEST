@@ -18,7 +18,7 @@ function handleInput(e) {
 }
 
 // const debounce = delay => func =>{
-//     let timeout = null
+//     let timeout
 //     return (...args) => { // we are passing the event with ...args
 //         clearTimeout(timeout); //reset the timeout
 //         timeout = setTimeout(() => {
@@ -27,14 +27,30 @@ function handleInput(e) {
 //     }
 // }
 
-//ALTERNATIVE USING BIND:
+// alternative return function using .apply()
+// return function() {
+//     clearTimeout(debounceTimer)
+//     debounceTimer = setTimeout(()=> {
+//         func.apply(this, arguments)
+//     }, delay)
+// }
+
+//ALTERNATIVE USING .bind():
+// const debounce = delay => func =>{
+//     let timeout
+//     return (...args) => {
+//         clearTimeout(timeout);
+//         timeout = setTimeout(func.bind(null,...args),delay);
+//         // the first argument (null) sets the value of `this`. But since we do not need to change the context we set it as null.
+//     }
+// }
+
+//ALTERNATIVE SIMPLY PASSING ...args
 const debounce = delay => func =>{
-    let timeout = null
+    let timeout
     return (...args) => {
         clearTimeout(timeout);
-        timeout = setTimeout(func.bind(null,...args),delay);
-        // the first argument (null) sets the value of `this`. But since we do not need to change the context we set it as null.
+        timeout = setTimeout(()=>{func(...args)},delay);
     }
 }
-
 document.getElementById('name-input').addEventListener('input', debounce(500)(handleInput))
