@@ -37,9 +37,9 @@ Challenge:
 */
 // const logMessage = (level, message) => `[${level.toUpperCase()}] ${message}`
 const logMessage = level => message => `[${level.toUpperCase()}] ${message}`
-const infoLogger = logMessage('[info]')
-const warnLogger = logMessage('[warn]')
-const errorLogger= logMessage('[error]')
+const infoLogger = logMessage('info')
+const warnLogger = logMessage('warn')
+const errorLogger= logMessage('error')
 
 console.log(infoLogger('Application started'))
 console.log(infoLogger('User logged in'))
