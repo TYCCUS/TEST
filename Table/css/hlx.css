@@ -2930,52 +2930,52 @@
 
 @font-face {
   font-family: 'HLX-THIN';
-  src: url(https://helixara.de/ASX/FNX/hlx-Thin.ttf) format('truetype'), url(https://helixara.de/ASX/FNX/hlx-Thin.woff) format('woff');
+  src: url(./fonts/Poppins/Poppins-ExtraLight.ttf) format('truetype'), url(./fonts/Poppins/Poppins-ExtraLight.woff) format('woff');
 }
 
 @font-face {
   font-family: 'HLX-MED';
-  src: url(https://helixara.de/ASX/FNX/hlx-Medium.ttf) format('truetype'), url(https://helixara.de/ASX/FNX/hlx-Medium.woff) format('woff');
+  src: url(./fonts/Poppins/Poppins-Medium.ttf) format('truetype'), url(./fonts/Poppins/Poppins-Medium.woff) format('woff');
 }
 
 @font-face {
   font-family: 'HLX-LIGHT';
-  src: url(https://helixara.de/ASX/FNX/hlx-Light.ttf) format('truetype'), url(https://helixara.de/ASX/FNX/hlx-Light.woff) format('woff');
+  src: url(./fonts/Poppins/Poppins-Light.ttf) format('truetype'), url(./fonts/Poppins/Poppins-Light.woff) format('woff');
 }
 
 @font-face {
   font-family: 'HLX-HAIR';
-  src: url(https://helixara.de/ASX/FNX/hlx-Hairline.ttf) format('truetype'), url(https://helixara.de/ASX/FNX/hlx-Hairline.woff) format('woff');
+  src: url(./fonts/Poppins/Poppins-ExtraLightItalic.ttf) format('truetype'), url(./fonts/Poppins/Poppins-ExtraLightItalic.woff) format('woff');
 }
 
 @font-face {
   font-family: 'HLX-XBOLD';
-  src: url(https://helixara.de/ASX/FNX/hlx-Extrabold.ttf) format('truetype'), url(https://helixara.de/ASX/FNX/hlx-Extrabold.woff) format('woff');
+  src: url(./fonts/Poppins/Poppins-Extrabold.ttf) format('truetype'), url(./fonts/Poppins/Poppins-Extrabold.woff) format('woff');
 }
 
 @font-face {
   font-family: 'HLX-BOOK';
-  src: url(https://helixara.de/ASX/FNX/hlx-Book.ttf) format('truetype'), url(https://helixara.de/ASX/FNX/hlx-Book.woff) format('woff');
+  src: url(./fonts/Poppins/Poppins-Regular.ttf) format('truetype'), url(./fonts/Poppins/Poppins-Regular.woff) format('woff');
 }
 
 @font-face {
   font-family: 'HLX-BOLD';
-  src: url(https://helixara.de/ASX/FNX/hlx-Bold.ttf) format('truetype'), url(https://helixara.de/ASX/FNX/hlx-Bold.woff) format('woff');
+  src: url(./fonts/Poppins/Poppins-Bold.ttf) format('truetype'), url(./fonts/Poppins/Poppins-Bold.woff) format('woff');
 }
 
 @font-face {
   font-family: 'HLX-BLACK';
-  src: url(https://helixara.de/ASX/FNX/hlx-Black.ttf) format('truetype'), url(https://helixara.de/ASX/FNX/hlx-Black.woff) format('woff');
+  src: url(./fonts/Poppins/Poppins-Black.ttf) format('truetype'), url(./fonts/Poppins/Poppins-Black.woff) format('woff');
 }
 
 @font-face {
   font-family: 'HLX-AWE';
-  src: url(https://helixara.de/ASX/FNX/avantgardetyccus-awesome-webfont.ttf) format('truetype'), url(https://helixara.de/ASX/FNX/AvantGardeTyccus-Awesome.otf) format('otf');
+  src: url(./fonts/Oswald/static/Oswald-Light.ttf) format('truetype'), url(./fonts/Oswald/static/Oswald-Light.ttf) format('otf');
 }
 
 @font-face {
   font-family: 'HLX-AWEBOLD';
-  src: url(https://helixara.de/ASX/FNX/avantgardetyccus-bold-webfont.ttf) format('truetype'), url(https://helixara.de/ASX/FNX/AvantGardeTyccus-Bold.otf) format('otf');
+  src: url(./fonts/Oswald/static/Oswald-Regular.ttf) format('truetype'), url(./fonts/Oswald/static/Oswald-Regular.ttf) format('otf');
 }
 
 .FONT-HLX-100 {  font-family: 'HLX-HAIR' !important;}
@@ -2986,8 +2986,8 @@
 .FONT-HLX-600 {  font-family: 'HLX-BOLD' !important;}
 .FONT-HLX-700 {  font-family: 'HLX-XBOLD' !important;}
 .FONT-HLX-800 {  font-family: 'HLX-BLACK' !important;}
-.FONT-HLX-AWE {  font-family: 'HLX-AWE' !important;}
-.FONT-HLX-LOGO {  font-family: 'HLX-AWEBOLD' !important;}
+/* .FONT-HLX-BLACK {  font-family: 'HLX-BLACK' !important;}
+.FONT-HLX-LOGO {  font-family: 'HLX-BOLD' !important;} */
 .TXT-HLX-THIN {  font-family: 'HLX-THIN' !important;}
 .TXT-HLX-MED {  font-family: 'HLX-MED' !important;}
 .TXT-HLX-LIGHT {  font-family: 'HLX-LIGHT' !important;}
@@ -2996,8 +2996,8 @@
 .TXT-HLX-XBOLD {  font-family: 'HLX-XBOLD' !important;}
 .TXT-HLX-BOOK {  font-family: 'HLX-BOOK' !important;}
 .TXT-HLX-BLACK {  font-family: 'HLX-BLACK' !important;}
-.TXT-HLX-AWE {  font-family: 'HLX-AWE' !important;}
-.TXT-HLX-AWEBOLD {  font-family: 'HLX-AWEBOLD' !important;}
+/* .TXT-HLX-BLACK {  font-family: 'HLX-BLACK' !important;}
+.TXT-HLX-BOLD {  font-family: 'HLX-BOLD' !important;} */
 .TXT-HLX-AQUOS {  font-family: Agus sans !important;}
 
 .TEXTSIZEUS {  font-size: 0.8rem !important;}
@@ -20073,791 +20073,6 @@ td{  min-width:300px !important;}
 .SVG-WARMSAND-OP75 {--color1: var(--color-WARMSAND-OP75); --color2: var(--color-WARMSAND-OP75);}
 .SVG-WARMSAND-OP75-I {--color1: var(--color-WARMSAND-OP75-I); --color2: var(--color-WARMSAND-OP75-I);}
 
-
-.VIDEO-TEXTURE-STRIPES-WHITE {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAACBJREFUGFdjZEAC/////88I44M5IAASgHFAbEZkDkgAACAGEAEsi3uLAAAAAElFTkSuQmCC) repeat;
-}
-
-.VIDEO-TEXTURE-STRIPES-DARK {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAB9JREFUGFdjZEAF/xmR+P8ZGBgYYQJgDkgSRMA5IAEAgq4EBI6THD4AAAAASUVORK5CYII=) repeat;
-}
-
-.VIDEO-TEXTURE-DOTS-DARK {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAABtJREFUGFdjZGBg+M/AwMDIAAVwBjYBsEoMFQBW5gIF0HSEnwAAAABJRU5ErkJggg==) repeat;
-}
-
-.VIDEO-TEXTURE-DOTS-WHITE {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAABxJREFUGFdj/P///39GRkZGBiiAMzAEYCoxVAAAZN0IBXg9KUwAAAAASUVORK5CYII=) repeat;
-}
-
-.VIDEO-WAVES-DARK {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAAXNSR0IArs4c6QAAAD9JREFUKFONkNEKACAIA8///2jDwCinkG9uh04NLQesylVISOAbrObTJ9iuA44e4ARlzO1L6Oa4kPwX1DcME1n5/goIOM5KEQAAAABJRU5ErkJggg==) repeat;
-}
-
-.VIDEO-WAVES-WHITE {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAAXNSR0IArs4c6QAAAD9JREFUKFNjZEAD/////8/IyMiILo4iAFOETTFcIbokOh+sEJd1yOKMuBTB3AiTx3A0uifgNmKTwCZGlIkgjQAPCigFAteAwQAAAABJRU5ErkJggg==) repeat;
-}
-
-.VIDEO-TEXTURE-POLKA-WHITE {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAEFJREFUKFNjZGBgMGZgYDjLgB8YM6LJI2tCMQBZITaT4WIwhegmgSyCOQcsR5bVIFMIupEkq4nyDCyU8FpNVIADABzKFHE7OuI0AAAAAElFTkSuQmCC) repeat;
-}
-
-.VIDEO-TEXTURE-POLKA-DARK {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAE5JREFUKFNjZGBgMGZgYDjLgAAgPgigiDEiKQAxkTWhGICsEN1kFI0whegmIVsNlgMpxKYI5iKYO41JUojNE1ithllDlGewKcYIHqICHAARyRbX7SlXyQAAAABJRU5ErkJggg==) repeat;
-}
-
-.VIDEO-TEXTURE-SQUARES-WHITE {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAAXNSR0IArs4c6QAAABxJREFUGFdj/P///38GHIARJMnIyMiITX7QSQIAaykcBKk0IjgAAAAASUVORK5CYII=) repeat;
-}
-
-.VIDEO-TEXTURE-SQUARES-DARK {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAAXNSR0IArs4c6QAAABhJREFUGFdjZGBg8GXAARihkpuxyQ86SQB4KAZVHxABpwAAAABJRU5ErkJggg==) repeat;
-}
-
-.VIDEO-TEXTURE-DUOTONE-DARK {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAE5JREFUKFNjZGBgMGZgYDjLgAAgPgigiDEiKQAxkTWhGICsEN1kFI0whegmIVsNlgMpxKYI5iKYO41JUojNE1ithllDlGewKcYIHqICHAARyRbX7SlXyQAAAABJRU5ErkJggg==) repeat;
-}
-
-.VIDEO-TEXTURE-DUOTONE-WHITE {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAFVJREFUKFONkUsOACEIQ6c39+YYjDXPxsW4EUg/VFVVQ9L49um+y5zJgL5NMpiEA0xlEhfBA7NpzVpUoiVtF+Y3MHfJ1Ba6wqTdM/UrFN/y2jHB/IQJC5ll/x/YdbAAAAAASUVORK5CYII=) repeat;
-}
-
-.VIDEO-TEXTURE-ORGANIC-DARK {
-  background: radial-gradient(#000000 10%, transparent 10%, transparent 39%, #000000 40%, #000000 45%, transparent 46%), radial-gradient(circle at top left, #000000 4%, transparent 5%, transparent 19%, #000000 20%, #000000 22%, transparent 23%), radial-gradient(circle at top right, #000000 4%, transparent 5%, transparent 19%, #000000 20%, #000000 22%, transparent 23%), radial-gradient(circle at bottom left, #000000 4%, transparent 5%, transparent 19%, #000000 20%, #000000 22%, transparent 23%), radial-gradient(circle at bottom right, #000000 4%, transparent 5%, transparent 19%, #000000 20%, #000000 22%, transparent 23%);
-  background-size: 1em 1em;
-  background-color: #ffffff;
-}
-
-.VIDEO-TEXTURE-3PX-TILE {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/3px-tile.png) repeat;
-}
-
-.VIDEO-TEXTURE-45-DEGREE-FABRIC-DARK {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/45-degree-fabric-dark.png) repeat;
-}
-
-.VIDEO-TEXTURE-45-DEGREE-FABRIC-LIGHT {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/45-degree-fabric-light.png) repeat;
-}
-
-.VIDEO-TEXTURE-ARABESQUE {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/arabesque.png) repeat;
-}
-
-.VIDEO-TEXTURE-ARGYLE {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/argyle.png) repeat;
-}
-
-.VIDEO-TEXTURE-ASFALT-DARK {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/asfalt-dark.png) repeat;
-}
-
-.VIDEO-TEXTURE-ASFALT-LIGHT {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/asfalt-light.png) repeat;
-}
-
-.VIDEO-TEXTURE-ASSAULT {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/assault.png) repeat;
-}
-
-.VIDEO-TEXTURE-AXIOM-PATTERN {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/axiom-pattern.png) repeat;
-}
-
-.VIDEO-TEXTURE-AZ-SUBTLE {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/az-subtle.png) repeat;
-}
-
-.VIDEO-TEXTURE-BASKETBALL {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/basketball.png) repeat;
-}
-
-.VIDEO-TEXTURE-BATTHERN {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/batthern.png) repeat;
-}
-
-.VIDEO-TEXTURE-BEDGE-GRUNGE {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/bedge-grunge.png) repeat;
-}
-
-.VIDEO-TEXTURE-BEIGE-PAPER {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/beige-paper.png) repeat;
-}
-
-.VIDEO-TEXTURE-BILLIE-HOLIDAY {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/billie-holiday.png) repeat;
-}
-
-.VIDEO-TEXTURE-BINDING-DARK {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/binding-dark.png) repeat;
-}
-
-.VIDEO-TEXTURE-BINDING-LIGHT {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/binding-light.png) repeat;
-}
-
-.VIDEO-TEXTURE-BLACK-FELT {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/black-felt.png) repeat;
-}
-
-.VIDEO-TEXTURE-BLACK-LINEN-2 {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/black-linen-2.png) repeat;
-}
-
-.VIDEO-TEXTURE-BLACK-LINEN {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/black-linen.png) repeat;
-}
-
-.VIDEO-TEXTURE-BLACK-MAMBA {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/black-mamba.png) repeat;
-}
-
-.VIDEO-TEXTURE-BLACK-ORCHID {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/black-orchid.png) repeat;
-}
-
-.VIDEO-TEXTURE-BLACK-PAPER {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/black-paper.png) repeat;
-}
-
-.VIDEO-TEXTURE-BLU-STRIPES {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/blu-stripes.png) repeat;
-}
-
-.VIDEO-TEXTURE-BRICK-WALL-DARK {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/brick-wall-dark.png) repeat;
-}
-
-.VIDEO-TEXTURE-BRICK-WALL {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/brick-wall.png) repeat;
-}
-
-.VIDEO-TEXTURE-BRIGHT-SQUARES {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/bright-squares.png) repeat;
-}
-
-.VIDEO-TEXTURE-BROKEN-NOISE {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/broken-noise.png) repeat;
-}
-
-.VIDEO-TEXTURE-BRUSHED-ALUM-DARK {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/brushed-alum-dark.png) repeat;
-}
-
-.VIDEO-TEXTURE-BRUSHED-ALUM {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/brushed-alum.png) repeat;
-}
-
-.VIDEO-TEXTURE-BURIED {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/buried.png) repeat;
-}
-
-.VIDEO-TEXTURE-CARDBOARD-FLAT {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/cardboard-flat.png) repeat;
-}
-
-.VIDEO-TEXTURE-CARDBOARD {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/cardboard.png) repeat;
-}
-
-.VIDEO-TEXTURE-CARTOGRAPHER {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/cartographer.png) repeat;
-}
-
-.VIDEO-TEXTURE-CHECKERED-PATTERN {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/checkered-pattern.png) repeat;
-}
-
-.VIDEO-TEXTURE-CHURCH {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/church.png) repeat;
-}
-
-.VIDEO-TEXTURE-CLASSY-FABRIC {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/classy-fabric.png) repeat;
-}
-
-.VIDEO-TEXTURE-CLEAN-GRAY-PAPER {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/clean-gray-paper.png) repeat;
-}
-
-.VIDEO-TEXTURE-CLEAN-TEXTILE {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/clean-textile.png) repeat;
-}
-
-.VIDEO-TEXTURE-CLOTH-ALIKE {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/cloth-alike.png) repeat;
-}
-
-.VIDEO-TEXTURE-CONCRETE-WALL-2 {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/concrete-wall-2.png) repeat;
-}
-
-.VIDEO-TEXTURE-CONCRETE-WALL-3 {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/concrete-wall-3.png) repeat;
-}
-
-.VIDEO-TEXTURE-CONCRETE-WALL {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/concrete-wall.png) repeat;
-}
-
-.VIDEO-TEXTURE-CONNECTED {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/connected.png) repeat;
-}
-
-.VIDEO-TEXTURE-CREAM-PAPER {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/cream-paper.png) repeat;
-}
-
-.VIDEO-TEXTURE-CREAM-PIXELS {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/cream-pixels.png) repeat;
-}
-
-.VIDEO-TEXTURE-CRISP-PAPER-RUFFLES {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/crisp-paper-ruffles.png) repeat;
-}
-
-.VIDEO-TEXTURE-CRISSXCROSS {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/crissxcross.png) repeat;
-}
-
-.VIDEO-TEXTURE-CROSS-SCRATCHES {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/cross-scratches.png) repeat;
-}
-
-.VIDEO-TEXTURE-CROSSWORD {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/crossword.png) repeat;
-}
-
-.VIDEO-TEXTURE-CUBES {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/cubes.png) repeat;
-}
-
-.VIDEO-TEXTURE-DARK-BRICK-WALL {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/dark-brick-wall.png) repeat;
-}
-
-.VIDEO-TEXTURE-DARK-DENIM-3 {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/dark-denim-3.png) repeat;
-}
-
-.VIDEO-TEXTURE-DARK-DENIM {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/dark-denim.png) repeat;
-}
-
-.VIDEO-TEXTURE-DARK-LEATHER {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/dark-leather.png) repeat;
-}
-
-.VIDEO-TEXTURE-DARK-MOSAIC {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/dark-mosaic.png) repeat;
-}
-
-.VIDEO-TEXTURE-DARK-TIRE {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/dark-tire.png) repeat;
-}
-
-.VIDEO-TEXTURE-DARK-WALL {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/dark-wall.png) repeat;
-}
-
-.VIDEO-TEXTURE-DARK-WOOD {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/dark-wood.png) repeat;
-}
-
-.VIDEO-TEXTURE-DARTH-STRIPE {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/darth-stripe.png) repeat;
-}
-
-.VIDEO-TEXTURE-DEBUT-DARK {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/debut-dark.png) repeat;
-}
-
-.VIDEO-TEXTURE-DEBUT-LIGHT {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/debut-light.png) repeat;
-}
-
-.VIDEO-TEXTURE-DIAGMONDS-LIGHT {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/diagmonds-light.png) repeat;
-}
-
-.VIDEO-TEXTURE-DIAGMONDS {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/diagmonds.png) repeat;
-}
-
-.VIDEO-TEXTURE-DIAGONAL-NOISE {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/diagonal-noise.png) repeat;
-}
-
-.VIDEO-TEXTURE-DIAGONAL-STRIPED-BRICK {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/diagonal-striped-brick.png) repeat;
-}
-
-.VIDEO-TEXTURE-DIAMOND-UPHOLSTERY {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/diamond-upholstery.png) repeat;
-}
-
-.VIDEO-TEXTURE-DIRTY-OLD-BLACK-SHIRT {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/dirty-old-black-shirt.png) repeat;
-}
-
-.VIDEO-TEXTURE-DOTNOISE-LIGHT-GREY {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/dotnoise-light-grey.png) repeat;
-}
-
-.VIDEO-TEXTURE-DOUBLE-LINED {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/double-lined.png) repeat;
-}
-
-.VIDEO-TEXTURE-DUST {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/dust.png) repeat;
-}
-
-.VIDEO-TEXTURE-EGG-SHELL {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/egg-shell.png) repeat;
-}
-
-.VIDEO-TEXTURE-JQUERY {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/jquery.minicolors) repeat;
-}
-
-.VIDEO-TEXTURE-OLD-MOON {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/old-moon.png) repeat;
-}
-
-.VIDEO-TEXTURE-OLD-WALL {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/old-wall.png) repeat;
-}
-
-.VIDEO-TEXTURE-OTIS-REDDING {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/otis-redding.png) repeat;
-}
-
-.VIDEO-TEXTURE-PADDED-LIGHT {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/padded-light.png) repeat;
-}
-
-.VIDEO-TEXTURE-PADDED {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/padded.png) repeat;
-}
-
-.VIDEO-TEXTURE-PAPER-1 {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/paper-1.png) repeat;
-}
-
-.VIDEO-TEXTURE-PAPER-2 {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/paper-2.png) repeat;
-}
-
-.VIDEO-TEXTURE-PAPER-3 {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/paper-3.png) repeat;
-}
-
-.VIDEO-TEXTURE-PAPER-FIBERS {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/paper-fibers.png) repeat;
-}
-
-.VIDEO-TEXTURE-PAPER {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/paper.png) repeat;
-}
-
-.VIDEO-TEXTURE-PERFORATED-WHITE-LEATHER {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/perforated-white-leather.png) repeat;
-}
-
-.VIDEO-TEXTURE-PINSTRIPED-SUIT {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/pinstriped-suit.png) repeat;
-}
-
-.VIDEO-TEXTURE-PIXEL-WEAVE {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/pixel-weave.png) repeat;
-}
-
-.VIDEO-TEXTURE-POLONEZ-PATTERN {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/polonez-pattern.png) repeat;
-}
-
-.VIDEO-TEXTURE-POOL-TABLE {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/pool-table.png) repeat;
-}
-
-.VIDEO-TEXTURE-PROJECT-PAPER {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/project-paper.png) repeat;
-}
-
-.VIDEO-TEXTURE-PSYCHEDELIC {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/psychedelic.png) repeat;
-}
-
-.VIDEO-TEXTURE-PURTY-WOOD {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/purty-wood.png) repeat;
-}
-
-.VIDEO-TEXTURE-PW-PATTERN {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/pw-pattern.png) repeat;
-}
-
-.VIDEO-TEXTURE-RANDOM-GREY-VARIATIONS {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/random-grey-variations.png) repeat;
-}
-
-.VIDEO-TEXTURE-RAVENNA {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/ravenna.png) repeat;
-}
-
-.VIDEO-TEXTURE-REBEL {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/rebel.png) repeat;
-}
-
-.VIDEO-TEXTURE-REDOX-01 {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/redox-01.png) repeat;
-}
-
-.VIDEO-TEXTURE-REDOX-02 {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/redox-02.png) repeat;
-}
-
-.VIDEO-TEXTURE-RETINA-DUST {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/retina-dust.png) repeat;
-}
-
-.VIDEO-TEXTURE-RETINA-WOOD {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/retina-wood.png) repeat;
-}
-
-.VIDEO-TEXTURE-RETRO-INTRO {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/retro-intro.png) repeat;
-}
-
-.VIDEO-TEXTURE-RICE-PAPER-2 {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/rice-paper-2.png) repeat;
-}
-
-.VIDEO-TEXTURE-RICE-PAPER-3 {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/rice-paper-3.png) repeat;
-}
-
-.VIDEO-TEXTURE-RICE-PAPER {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/rice-paper.png) repeat;
-}
-
-.VIDEO-TEXTURE-ROBOTS {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/robots.png) repeat;
-}
-
-.VIDEO-TEXTURE-ROCKY-WALL {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/rocky-wall.png) repeat;
-}
-
-.VIDEO-TEXTURE-ROUGH-CLOTH-LIGHT {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/rough-cloth-light.png) repeat;
-}
-
-.VIDEO-TEXTURE-ROUGH-CLOTH {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/rough-cloth.png) repeat;
-}
-
-.VIDEO-TEXTURE-ROUGH-DIAGONAL {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/rough-diagonal.png) repeat;
-}
-
-.VIDEO-TEXTURE-SANDPAPER {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/sandpaper.png) repeat;
-}
-
-.VIDEO-TEXTURE-SCRIBBLE-LIGHT {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/scribble-light.png) repeat;
-}
-
-.VIDEO-TEXTURE-SHATTERED-DARK {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/shattered-dark.png) repeat;
-}
-
-.VIDEO-TEXTURE-SHATTERED {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/shattered.png) repeat;
-}
-
-.VIDEO-TEXTURE-SHLEY-TREE-1 {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/shley-tree-1.png) repeat;
-}
-
-.VIDEO-TEXTURE-SHLEY-TREE-2 {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/shley-tree-2.png) repeat;
-}
-
-.VIDEO-TEXTURE-SKEWED-PRINT {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/skewed-print.png) repeat;
-}
-
-.VIDEO-TEXTURE-SKIN-SIDE-UP {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/skin-side-up.png) repeat;
-}
-
-.VIDEO-TEXTURE-SKULLS {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/skulls.png) repeat;
-}
-
-.VIDEO-TEXTURE-SMOOTH-WALL-DARK {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/smooth-wall-dark.png) repeat;
-}
-
-.VIDEO-TEXTURE-SMOOTH-WALL-LIGHT {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/smooth-wall-light.png) repeat;
-}
-
-.VIDEO-TEXTURE-SNEAKER-MESH-FABRIC {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/sneaker-mesh-fabric.png) repeat;
-}
-
-.VIDEO-TEXTURE-SNOW {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/snow.png) repeat;
-}
-
-.VIDEO-TEXTURE-SOFT-WALLPAPER {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/soft-wallpaper.png) repeat;
-}
-
-.VIDEO-TEXTURE-SOLID {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/solid.png) repeat;
-}
-
-.VIDEO-TEXTURE-SQUAIRY {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/squairy.png) repeat;
-}
-
-.VIDEO-TEXTURE-SQUARED-METAL {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/squared-metal.png) repeat;
-}
-
-.VIDEO-TEXTURE-STARDUST {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/stardust.png) repeat;
-}
-
-.VIDEO-TEXTURE-STITCHED-WOOL {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/stitched-wool.png) repeat;
-}
-
-.VIDEO-TEXTURE-STRANGE-BULLSEYES {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/strange-bullseyes.png) repeat;
-}
-
-.VIDEO-TEXTURE-STRESSED-LINEN {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/stressed-linen.png) repeat;
-}
-
-.VIDEO-TEXTURE-STUCCO {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/stucco.png) repeat;
-}
-
-.VIDEO-TEXTURE-SUBTLE-FRECKLES {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/subtle-freckles.png) repeat;
-}
-
-.VIDEO-TEXTURE-SUBTLE-GREY {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/subtle-grey.png) repeat;
-}
-
-.VIDEO-TEXTURE-SUBTLE-GRUNGE {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/subtle-grunge.png) repeat;
-}
-
-.VIDEO-TEXTURE-SUBTLE-WHITE-FEATHERS {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/subtle-white-feathers.png) repeat;
-}
-
-.VIDEO-TEXTURE-SWIRL {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/swirl.png) repeat;
-}
-
-.VIDEO-TEXTURE-TEX2RES1 {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/tex2res1.png) repeat;
-}
-
-.VIDEO-TEXTURE-TEX2RES2 {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/tex2res2.png) repeat;
-}
-
-.VIDEO-TEXTURE-TEX2RES3 {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/tex2res3.png) repeat;
-}
-
-.VIDEO-TEXTURE-TEX2RES4 {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/tex2res4.png) repeat;
-}
-
-.VIDEO-TEXTURE-TEX2RES5 {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/tex2res5.png) repeat;
-}
-
-.VIDEO-TEXTURE-TEXTURED-PAPER {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/textured-paper.png) repeat;
-}
-
-.VIDEO-TEXTURE-TEXTURED-STRIPES {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/textured-stripes.png) repeat;
-}
-
-.VIDEO-TEXTURE-TEXTURETASTIC-GRAY {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/texturetastic-gray.png) repeat;
-}
-
-.VIDEO-TEXTURE-TICKS {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/ticks.png) repeat;
-}
-
-.VIDEO-TEXTURE-TILEABLE-WOOD-COLORED {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/tileable-wood-colored.png) repeat;
-}
-
-.VIDEO-TEXTURE-TILEABLE-WOOD {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/tileable-wood.png) repeat;
-}
-
-.VIDEO-TEXTURE-TRANSPARENT-SQUARE-TILES {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/transparent-square-tiles.png) repeat;
-}
-
-.VIDEO-TEXTURE-TREE-BARK {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/tree-bark.png) repeat;
-}
-
-.VIDEO-TEXTURE-TRIANGLES-2 {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/triangles-2.png) repeat;
-}
-
-.VIDEO-TEXTURE-TWEED {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/tweed.png) repeat;
-}
-
-.VIDEO-TEXTURE-TWINKLE-TWINKLE {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/twinkle-twinkle.png) repeat;
-}
-
-.VIDEO-TEXTURE-TXTURE {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/txture.png) repeat;
-}
-
-.VIDEO-TEXTURE-TYPE {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/type.png) repeat;
-}
-
-.VIDEO-TEXTURE-VERTICAL-CLOTH {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/vertical-cloth.png) repeat;
-}
-
-.VIDEO-TEXTURE-VICHY {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/vichy.png) repeat;
-}
-
-.VIDEO-TEXTURE-VINTAGE-SPECKLES {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/vintage-speckles.png) repeat;
-}
-
-.VIDEO-TEXTURE-WALL-4-LIGHT {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/wall-4-light.png) repeat;
-}
-
-.VIDEO-TEXTURE-WASHI {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/washi.png) repeat;
-}
-
-.VIDEO-TEXTURE-WAVE-GRID {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/wave-grid.png) repeat;
-}
-
-.VIDEO-TEXTURE-WET-SNOW {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/wet-snow.png) repeat;
-}
-
-.VIDEO-TEXTURE-WHITE-BRUSHED {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/white-brushed.png) repeat;
-}
-
-.VIDEO-TEXTURE-WHITE-DIAMOND-DARK {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/white-diamond-dark.png) repeat;
-}
-
-.VIDEO-TEXTURE-WHITE-DIAMOND {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/white-diamond.png) repeat;
-}
-
-.VIDEO-TEXTURE-WHITE-LEATHER {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/white-leather.png) repeat;
-}
-
-.VIDEO-TEXTURE-WHITE-LINEN {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/white-linen.png) repeat;
-}
-
-.VIDEO-TEXTURE-WHITE-PAPERBOARD {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/white-paperboard.png) repeat;
-}
-
-.VIDEO-TEXTURE-WHITE-PLASTER {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/white-plaster.png) repeat;
-}
-
-.VIDEO-TEXTURE-WHITE-SAND {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/white-sand.png) repeat;
-}
-
-.VIDEO-TEXTURE-WHITE-TEXTURE {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/white-texture.png) repeat;
-}
-
-.VIDEO-TEXTURE-WHITE-TILES {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/white-tiles.png) repeat;
-}
-
-.VIDEO-TEXTURE-WHITE-WALL-3-2 {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/white-wall-3-2.png) repeat;
-}
-
-.VIDEO-TEXTURE-WHITE-WALL-3 {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/white-wall-3.png) repeat;
-}
-
-.VIDEO-TEXTURE-WHITE-WALL {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/white-wall.png) repeat;
-}
-
-.VIDEO-TEXTURE-WHITEY {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/whitey.png) repeat;
-}
-
-.VIDEO-TEXTURE-WILD-FLOWERS {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/wild-flowers.png) repeat;
-}
-
-.VIDEO-TEXTURE-WILD-OLIVA {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/wild-oliva.png) repeat;
-}
-
-.VIDEO-TEXTURE-WINE-CORK {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/wine-cork.png) repeat;
-}
-
-.VIDEO-TEXTURE-WOOD-PATTERN {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/wood-pattern.png) repeat;
-}
-
-.VIDEO-TEXTURE-WOOD {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/wood.png) repeat;
-}
-
-.VIDEO-TEXTURE-WORN-DOTS {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/worn-dots.png) repeat;
-}
-
-.VIDEO-TEXTURE-XV {
-  background: url(https://helixara.de/FLATFILES/IMG/TEXTURES/xv.png) repeat;
-}
-
-.VIDEO-TEXTURE-ORGANIC-LIGHT {
-  background: radial-gradient(#f4f4f4 10%, transparent 10%, transparent 39%, #f4f4f4 40%, #f4f4f4 45%, transparent 46%), radial-gradient(circle at top left, #f4f4f4 4%, transparent 5%, transparent 19%, #f4f4f4 20%, #f4f4f4 22%, transparent 23%), radial-gradient(circle at top right, #f4f4f4 4%, transparent 5%, transparent 19%, #f4f4f4 20%, #f4f4f4 22%, transparent 23%), radial-gradient(circle at bottom left, #f4f4f4 4%, transparent 5%, transparent 19%, #f4f4f4 20%, #f4f4f4 22%, transparent 23%), radial-gradient(circle at bottom right, #f4f4f4 4%, transparent 5%, transparent 19%, #f4f4f4 20%, #f4f4f4 22%, transparent 23%);
-  background-size: 1em 1em;
-  background-color: #ffffff;
-}
-
 .frostme {
   -webkit-animation: frosty 3s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.5s both;
   animation: frosty 3s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.5s both;
@@ -21758,27 +20973,6 @@ font-size:0.8rem !important;
   background: #00000090;
 }
 
-.PRODUCTTITLE-DARK {
-  color: white;
-  font-size: clamp(0.8rem, 0.6rem + 0.6vw, 1.5rem);
-  line-height: 1.1rem;
-  font-family: 'HLX-AWEBOLD';
-  letter-spacing: -.025rem;
-  text-align: center;
-}
-
-.PRODUCTDESCRIPTION-DARK {
-  color: white !important;
-  font-family: 'HLX-LIGHT';
-  font-weight: 300;
-  font-size: 0.8em;
-  line-height: 1rem;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  -webkit-line-clamp: 2;
-}
-
 .PRODUCT-CARD-IMAGE {
   width: 50px !important;
 }
@@ -21996,7 +21190,7 @@ border: none !important;
 .HEROTITLEVERTICAL {
   font-size: calc(9vh + 1rem);
   line-height: 1em;
-  font-family: 'HLX-AWEBOLD';
+  font-family: 'HLX-BOLD';
   text-align: center;
   margin: 0;
   letter-spacing: -0.1rem;
@@ -22668,7 +21862,7 @@ transition: var(--reactivity);
 }
 
 .ITEMTITLE {
-  font-family: HLX-AWE !important;
+  font-family: HLX-BLACK !important;
   font-size: var(--titlesize);
   line-height: 1em;
   font-weight: var(--titleweight) !important;
@@ -22692,7 +21886,7 @@ transition: var(--reactivity);
 
 .HIGHLIGHTBUTTON {
   display: inline-block;
-  font-family: HLX-AWE;
+  font-family: HLX-BLACK;
   font-weight: 800;
   text-align: center;
   text-transform: uppercase;
@@ -23143,16 +22337,6 @@ transition: var(--reactivity);
   box-sizing: border-box;
 }
 
-.BGHold {
-  background-image: url("https://helixara.de/FLATFILES/IMG/Hero4KUSDark.jpg");
-  height: 100vh;
-  width: 100vw;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: fixed;
-}
-
 .bandw {
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
@@ -23249,7 +22433,7 @@ transition: var(--reactivity);
 }
 
 .BANNER-BRAND {
-  font-family: 'HLX-AWEBOLD';
+  font-family: 'HLX-BOLD';
   font-size: clamp(0.6rem, 0.5rem + 0.5vw, 4rem);
   /*letter-spacing: var(--banner-title-kerning);*/
   line-height: 1em;
@@ -23940,7 +23124,7 @@ animation:none !important;
 .TYCCUSHEROTITLE {
   font-size: calc(7vw + 1rem);
   line-height: 1em;
-  font-family: 'HLX-AWEBOLD';
+  font-family: 'HLX-BOLD';
   text-align: center;
   margin: 0;
   letter-spacing: -0.1rem;
@@ -23950,7 +23134,7 @@ animation:none !important;
   .TYCCUSHEROTITLE {
     font-size: calc(7vw + 1rem);
     line-height: 1em;
-    font-family: 'HLX-AWEBOLD';
+    font-family: 'HLX-BOLD';
     text-align: center;
     margin: 0;
     letter-spacing: -0.2rem;
