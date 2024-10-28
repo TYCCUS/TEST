@@ -15,6 +15,23 @@ export const dataTypes = {
   rating: {rating:[1,2,3,4,5]},
   languages: {select:['spanish','english','german']},
 };
+export const dataCategories = {
+  id: 'number',
+  eID: 'text',
+  firstname: 'text',
+  lastname: 'text',
+  age: 'number',
+  gender: 'text',
+  company: 'text',
+  email: 'text',
+  phone: 'text',
+  address: 'text',
+  about: 'text',
+  registered: 'time',
+  isActive: 'boolean',
+  rating: 'number',
+  languages: 'text',
+};
 export const fieldWidths = {
   id: 50,
   eID: 200,
