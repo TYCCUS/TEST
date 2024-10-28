@@ -1,5 +1,5 @@
 export class DATASET {
-        
+
         static stringSort = data => property => data.toSorted((a, b) => {
                 const [nameA, nameB] = [a[property].toLowerCase(),b[property].toLowerCase()]
                 return nameA < nameB ? -1 : nameA > nameB ? 1 : 0
@@ -166,6 +166,7 @@ export class DATASET {
                 this.clearMutatedData
                 console.log(`new total records: ${this.getTotalRecords()}`)
         }
+        
         organizeGroups(sortBy = null){
                 const dataGroups = this.getDataGroups();
                 const emptyObject = {}
