@@ -1,5 +1,7 @@
 export class DATASET {
+//⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️ STATIC
 
+//      ⋮⋮⋮⋮⋮⋮⋮ ❕SORTING
         static stringSort = data => property => data.toSorted((a, b) => {
                 const [nameA, nameB] = [a[property].toLowerCase(),b[property].toLowerCase()]
                 return nameA < nameB ? -1 : nameA > nameB ? 1 : 0
@@ -12,13 +14,7 @@ export class DATASET {
         static numberSortReverse = data => property => data.toSorted((a, b) => b[property] - a[property])
         static timeSort = data => property => data.toSorted((a, b) => new Date(a[property]) - new Date(b[property]))
         static timeSortReverse = data => property => data.toSorted((a, b) => new Date(b[property]) - new Date(a[property]))
-        static groupData = data =>field => {
-                const [uniques,groups] = [new Set(),{}]
-                data.forEach(record =>uniques.add(record[field]))
-                uniques.forEach(group => {groups[group]=data.filter(record =>record[field]===group)})
-                uniques.clear() // free up memory
-                return groups //object with arrays of objects
-        }
+
         static cycleSort = current => {
                 if(['none','asc','desc'].includes(current)){
                         switch (current){
@@ -30,7 +26,42 @@ export class DATASET {
                         return current
                 }
         }
+
+//      ⋮⋮⋮⋮⋮⋮⋮ ❕GROUPING
+        static groupData = data =>field => {
+                const [uniques,groups] = [new Set(),{}]
+                data.forEach(record =>uniques.add(record[field]))
+                uniques.forEach(group => {groups[group]=data.filter(record =>record[field]===group)})
+                uniques.clear() // free up memory
+                return groups //object with arrays of objects
+        }
+
+//      ⋮⋮⋮⋮⋮⋮⋮ ❕COUNTING
         static tableCount = 0;
+
+//      ⋮⋮⋮⋮⋮⋮⋮ ❕SEARCH
+        static searchByValue = data => value => key =>{
+                // console.log(`DATASET search ${value} ${key ? `in field ${key}` : ''}`)
+                let result=[]
+                for(const record of data){
+                        if (!key){
+                                for (const field in record){
+                                        if( record[field] && String(record[field]).toUpperCase().includes(String(value).toUpperCase())){
+                                                 result.push(record)
+                                                 break
+                                        }
+                                 }
+                        } else {
+                                if(record[key] && String(record[key]).toUpperCase().includes(String(value).toUpperCase())){
+                                        result.push(record)
+                                        continue
+                                }
+                        }
+                }
+                // console.dir(result)
+                return result
+        }
+//⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️ CONSTRUCTOR
         constructor(data,fields,key,dataTypes,dataCategories,widths,table,dataMultiply=0){
                 this.key=key
                 this.data=data
@@ -49,6 +80,9 @@ export class DATASET {
                 this.expandedGroups = new Set() // keeps track of groups that are shown expanded displayed = all - collapsed
                 this.dataHasMutated = false
                 this.dataIsGrouped = false
+                this.searchByField = false
+                this.dataIsQueried = false
+                this.powerSearch = false
                 this.groupHeaderTag = '👾 ╌┄┈ApplicationDatasetGroupHeader┈┄╌ 👾'
                 this.groupTableHeaderTag = '👾 ╌┄┈ApplicationDatasetGroupTableHeader┈┄╌ 👾'
                 this.groupTableFooterTag = '👾 ╌┄┈ApplicationDatasetGroupTableFooter┈┄╌ 👾'
@@ -60,8 +94,7 @@ export class DATASET {
                 window[`table${DATASET.tableCount}`]=table;
         }
 
-        increaseTableCount(){DATASET.tableCount++}
-
+//⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️ METHODS
 
         addMutantData(...items){
                 this.mutatedData.push(...items)
@@ -130,8 +163,16 @@ export class DATASET {
         getRecordByIndex(index){
                 return this.dataHasMutated ? this.mutatedData[index] : this.data[index]
         }
-        getRecordByKey(index){
-                return this.dataHasMutated ? this.mutatedData[index] : this.data[index]
+        getRecordsByField(value){
+                this.clearMutatedData()
+                if(this.searchByField){
+                        const field = this.searchByField
+                        return DATASET.searchByValue(this.data)(value)(field)
+                }
+        }
+        getRecordsByValue(value){
+                this.clearMutatedData()
+                        return DATASET.searchByValue(this.data)(value)()
         }
         getSortOrder(field){
                 return this.sorts[field]
@@ -142,11 +183,8 @@ export class DATASET {
         getTableCount(){
                 return DATASET.tableCount
         }
-        getValueByIndex(index,field){
-                return this.dataHasMutated ? this.mutatedData[index][field] : this.data[index][field]
-        }
-        getValueByKey(index,field){
-                return this.dataHasMutated ? this.mutatedData[index][field] : this.data[index][field]
+        getValueByIndexField(index,field){
+                return this.dataHasMutated ? this.mutatedData[index]?.[field] : this.data[index][field]
         }
         groupRecords(field){
                 this.dataIsGrouped && this.ungroupRecords()
@@ -158,6 +196,9 @@ export class DATASET {
                 this.groups = this.getDataGroups()
                 this.groups.forEach(group=>this.collapsedGroups.add(group))
         }
+        increaseTableCount(){
+                DATASET.tableCount++
+        }
         multiply(times){
                 for (let i = 0; i < times + 1; i++) {
                         this.data.forEach(record=> {this.addMutantData(record)})
@@ -166,7 +207,6 @@ export class DATASET {
                 this.clearMutatedData
                 console.log(`new total records: ${this.getTotalRecords()}`)
         }
-        
         organizeGroups(sortBy = null){
                 const dataGroups = this.getDataGroups();
                 const emptyObject = {}
@@ -193,6 +233,10 @@ export class DATASET {
                         }
                 })
         }
+        queryRecords(query){
+                // TODO IMPLEMENT
+                this.Parser.parse(query)
+        }
         resetSortOrder(field = null){
                 if(field){
                         Object.keys(this.sorts).forEach(cField => this.sorts[cField]= (cField === field) ? DATASET.cycleSort(this.getSortOrder(field)) : 'none')
@@ -200,8 +244,30 @@ export class DATASET {
                         Object.keys(this.sorts).forEach(cField => this.sorts[cField]='none')
                 }
         }
-        setRenderer(renderer){
-                this.Renderer = renderer
+        searchRecords(value=false){ // TODO IMPLEMENT REGEX SEARCH IN NORMAL MODE
+                if(value){
+                        if(this.powerSearch){
+                                this.queryRecords(value)
+                        } else {
+                                console.log(`searching data for ${value} ${this.searchByField ?? ''}`)
+                                this.dataIsGrouped && this.ungroupRecords()
+                                this.mutatedData = this.searchByField ? this.getRecordsByField(value) : this.getRecordsByValue(value)
+                                this.dataHasMutated=true
+                                this.dataIsQueried=true
+                        }
+                } else {
+                        console.log(`empty search`)
+                        this.dataIsGrouped && this.ungroupRecords()
+                        this.clearMutatedData()
+                        this.data.forEach(record=> {this.addMutantData(record)})
+                        this.dataIsQueried=false
+                }
+        }
+        setParser(Parser){
+                this.Parser=Parser
+        }
+        setRenderer(Renderer){
+                this.Renderer = Renderer
         }
         sortData({field,datagroup=null,sortBy=null}={}){
                 const type = this.getDataCategory(field)
@@ -249,7 +315,8 @@ export class DATASET {
                         this.dataIsGrouped = false
                 }
         }
-
-
-
 }
+
+//      🔅❗️❕🔆 Ⓜ️ ꩟꩜🌀⭕️❌💢🤍💚🔰
+// 🟩⬜️🟥🟧🟨🟦🟪⚪️🔘🟢🔴🟡🔺🔻🔒🔍📍🏷️🛡️🔧🛠️💡⏱️🌅
+// 🎗️🏆🥇🥈🥉🔥💥🌟✨🌪️💧🌎🌑🌕🌻🍃🍀🌿🌱🥷🏾🧟‍♂️🧌🧙‍♂️🦹‍♂️👻💀☠️👽👾🤖🎃😈👿👣🧝‍♀️🧛‍♀️🧑‍🚀🫥🥶🤯

@@ -2,6 +2,7 @@ table{
     height: 1px; /*ALLOWS FOR CELL CONTENTS TO BE 100% HEIGHT ???*/
     pointer-events: all;
     background-color:var(--color-DARKMUTED-OP25);
+
 }
 thead{
     /* border-bottom:2px solid var(--color-LIGHT); */
@@ -34,7 +35,7 @@ th div:hover{
     opacity:1 !important;
 }
 tr{
-    /* height:28px !important; */
+    height:var(--rowHeight)!important; /* ROW HEIGHT */
     /* border-bottom:1px solid var(--color-LIGHT) !important; */
 }
 tr:nth-child(odd) {
@@ -101,6 +102,12 @@ td select{
 #tableContainer {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+}
+div[id^="modalContainer-"]{
+    position:absolute;
+    left:50%;
+    top:25%;
+    transform:translate(-50%,-25%);
 }
 .DYNAMIC{
     will-change: contents, scroll-position; 

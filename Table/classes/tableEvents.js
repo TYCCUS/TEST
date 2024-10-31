@@ -1,29 +1,60 @@
 export class EVENTS{
-    constructor(Dataset,Renderer){
+    constructor(Dataset){
         this.Dataset = Dataset
+        this.Renderer ={}
+        this.searchBar = document.getElementById('searchInput')
+        // this.Modals={}
+    }
+    setRenderer(Renderer){
         this.Renderer = Renderer
     }
-    setRenderer(renderer){
-        this.Renderer = renderer
+    setModal({type,Modal}){
+        this.Modals[type] = Modal
+    }
+    // setSearchModal(Modal){
+    //     this.Modals['search'] = Modal
+    // }
+    setSlowScroll(func, desc){
+        this.slowScroll = func
+        this.scrollDesceleration = desc
     }
     handler(event){
         const self = event.target
         if (self instanceof HTMLElement) {
-            console.log(`event triggered by ${self.getAttribute('hlx-element')} ${self.getAttribute('hlx-group')}`)
+            const element = self.getAttribute('hlx-element')
+            const field = self.getAttribute('hlx-field')
+            const group = self.getAttribute('hlx-group')
+            console.log(`event triggered by ${element} | group ${group}`)
             switch(true){
-                case self.getAttribute('hlx-element')==='header':
+                case(event.metaKey):
+                    switch(true){
+                        case element==='header':
+                            if(this.searchBar.getAttribute('field') !== field){
+                                this.searchBar.setAttribute('field',field)
+                                this.searchBar.setAttribute('placeholder',`search by ${field}`)
+                                this.Dataset.searchByField = field
+                            } else {
+                                this.searchBar.removeAttribute('field')
+                                this.searchBar.setAttribute('placeholder',`search`)
+                                this.Dataset.searchByField = false
+                                this.Dataset.dataIsQueried = false
+                            }
+                            break
+                    }
+                    break
+                case element==='header':
                     if(event.altKey){
-                        console.log(`group by ${self.getAttribute('hlx-field')}`)
-                        this.Dataset.groupRecords(self.getAttribute('hlx-field'))   //GROUP RECORDS
+                        console.log(`group by ${field}`)
+                        this.Dataset.groupRecords(field)   //GROUP RECORDS
                         this.Renderer.repopulateViewport(0)
                         this.Renderer.hideTableHeaders()
                     }else{  
-                        this.Dataset.sortRecords(self.getAttribute('hlx-field'))    //SORT RECORDS
+                        this.Dataset.sortRecords(field)    //SORT RECORDS
                         this.Renderer.repopulateViewport(0)
                         this.Renderer.showTableHeaders()
                     }
                     break
-                case self.getAttribute('hlx-element')==='group header':
+                case element==='group header':
                     const group =self.getAttribute('hlx-group')
                     if (self.getAttribute('group-status') === 'collapsed') { 
                         if(event.altKey){
@@ -40,11 +71,17 @@ export class EVENTS{
                     }
                     this.Renderer.repopulateViewport(0)
                     break
-                case self.getAttribute('hlx-element')==='group table header':
-                    this.Dataset.sortGroup(self.getAttribute('hlx-field'))          //SORT GROUPED RECORDS
+                case element==='group table header':
+                    this.Dataset.sortGroup(field)          //SORT GROUPED RECORDS
                     this.Renderer.repopulateViewport(0)
                     break
             }
         }
+    }
+    scrollHandler = (event) => {
+            const scrollMultiplier = (event.ctrlKey || event.metaKey) && event.altKey ? 100 : event.ctrlKey || event.metaKey ? 10 : event.altKey ? 5 : 2;
+            let scrollAmount = (Math.sign(event.deltaY) * scrollMultiplier); // -1 for up, 1 for down * multiplier
+            // event.shiftKey && (scrollAmount = this.slowScroll(scrollAmount)(this.scrollDesceleration)) // slow scroll if shift pressed
+            this.Renderer.repopulateViewport(scrollAmount)
     }
 }

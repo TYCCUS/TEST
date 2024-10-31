@@ -1,33 +1,132 @@
 export class RENDER{
 
         constructor(Dataset,Events,container){
-                this.windowHeight = window.innerHeight;
-                this.tableHeight = 1 //fraction of window height
-                this.rowHeight = 24 // Estimated height of each row
-                this.visibleRows = -1 + Math.floor((this.windowHeight * this.tableHeight) / this.rowHeight) // Number of rows on viewport
-                // alert(this.visibleRows)
                 this.dataRenderStartIndex = 0
                 this.scrollDesceleration = 4
+                this.rowHeight = 30
                 this.Dataset = Dataset
                 this.Events=Events
                 this.table = this.Dataset.table
                 this.tableContainer = container
                 this.tableHeadersVisible = true
-                this.setTableAttributes()
-                this.renderTableHeader()
-                this.renderTableBody()
-                this.showTable()
+                this.tableIsRendered = false
+                this.searchTimeout = null
+                this.inputBar = document.getElementById('searchInput')
+                this.powerSearchToggle = document.getElementById('powerSearchToggle')
+                this.normalSearchIcon=document.getElementById('normalSearchIcon')
+                this.powerSearchIcon=document.getElementById('powerSearchIcon')
+                this.render()
         }
-        setTableAttributes(){
+        render(){
+                this.setDimensions()
+                this.setUI()
+                if(!this.tableIsRendered){
+                        this.setTable()
+                        this.renderTableHeader()
+                        this.renderTableBody()
+                        this.renderTableFooter()
+                        this.tableIsRendered = true
+                        this.showTable()
+                } else {
+                        this.tableBody.remove()
+                        this.renderTableBody()
+                        this.populateViewport()
+                }
+        }
+        showWaitScreen(){
+                this.getWaitScreen().classList.add('FLEX-CENTER')
+                this.getWaitScreen().classList.remove('d-none')
+        }
+        hideWaitScreen(){
+                this.getWaitScreen().classList.remove('FLEX-CENTER')
+                this.getWaitScreen().classList.add('d-none')
+        }
+        getWaitScreen(){
+                return document.getElementById('waitScreen')
+        }
+        setRowHeight(height){
+                this.rowHeight = parseInt(height)
+                this.render()
+        }
+        setDimensions(){
+                this.windowHeight = window.innerHeight
+                this.windowWidth= window.innerWidth
+                this.toolbarsHeight = 50
+                this.UIspacing = 5
+                this.tableHeight = this.windowHeight-(2*this.toolbarsHeight)-(2*this.UIspacing) //fraction of window height
+                this.visibleRows = -1 + Math.floor(this.tableHeight / this.rowHeight) // Number of rows on viewport
+                // console.dir({
+                //         height: this.windowHeight,
+                //         width: this.windowWidth,
+                //         tableHeight: this.tableHeight,
+                //         rows: this.visibleRows
+                // })
+        }
+        setUI(){
+                console.log(`setting up UI`)
+                document.getElementById('topBar').classList.add(`H${this.toolbarsHeight}PX`)
+                document.getElementById('topBar').style.padding=(`${this.UIspacing}PX`)
+                document.getElementById('bottomBar').classList.add(`H${this.toolbarsHeight}PX`)
+                document.getElementById('leftBar').classList.add(`W${this.toolbarsHeight}PX`)
+                document.getElementById('rightBar').classList.add(`W${this.toolbarsHeight}PX`)
+                document.getElementById('tableCanvas').style.width=(`${this.windowWidth}px`)
+                document.getElementById('menuToggle').classList.add(`SQUARE${this.toolbarsHeight-(2*this.UIspacing)}PX`)
+                document.getElementById('menuToggle').style.marginRight=(`${this.UIspacing}PX`)
+                this.powerSearchToggle.classList.add(`SQUARE${this.toolbarsHeight-(2*this.UIspacing)}PX`)
+                this.powerSearchToggle.style.marginLeft=(`${this.UIspacing}PX`)
+                this.inputBar.style.height=(`${this.toolbarsHeight-(2*this.UIspacing)}px`)
+                this.inputBar.style.width=(`${this.windowWidth-(this.toolbarsHeight)-(2*this.UIspacing)}px`)
+                this.inputBar.style.padding=(`${this.UIspacing}px`)
+                this.getTableContainer().style.height=(`${this.tableHeight}px`)
+                this.getTableContainer().style.margin=(`${this.UIspacing}px`)
+        }
+        setTable(){
                 this.table.classList.add("table")
-                // this.table.classList.add("table", "table-dark","table-striped")
-                this.table.setAttribute("border", "1")
-                this.table.setAttribute("cellspacing", "0")
-                this.table.setAttribute("cellpadding", "5")
                 this.table.addEventListener( "click", (event)=>{
                         event.stopPropagation()
                         this.Events.handler(event)
                 })
+                this.getTableContainer().addEventListener( "wheel", (event)=>{
+                        if (event.deltaX !== 0){
+                        }else{
+                                event.preventDefault()
+                                event.stopPropagation()
+                                this.Events.scrollHandler(event)
+                        }
+                });
+                ['keyup', 'blur'].forEach(event=>this.inputBar.addEventListener(event,
+                        (event)=>{const val = event.target.value
+                        if (!val || val === " "){
+                                this.Dataset.searchRecords(false)
+                                this.repopulateViewport(0)
+                        } else {
+                                clearTimeout(this.searchTimeout);
+                                this.searchTimeout = setTimeout(() => {
+                                        this.Dataset.searchRecords(val)
+                                        this.repopulateViewport(0)
+                                },500)
+                        }
+                }))
+                this.inputBar.addEventListener('keyup blur', (event)=>{
+                        console.log(`input detected`)
+                        const val = event.target.value
+                        if (!val || val === " "){
+                                this.Dataset.searchRecords(false)
+                                this.repopulateViewport(0)
+                        } else {
+                                clearTimeout(this.searchTimeout);
+                                this.searchTimeout = setTimeout(() => {
+                                        this.Dataset.searchRecords(val)
+                                        this.repopulateViewport(0)
+                                },500)
+                        }
+                })
+                this.powerSearchToggle.addEventListener('click',(event)=>{
+                        this.Dataset.powerSearch = !this.Dataset.powerSearch
+                        this.normalSearchIcon.classList.toggle('d-none')
+                        this.powerSearchIcon.classList.toggle('d-none')
+                })
+                
         }
         renderTableHeader(){
                 const headerRow = this.table.createTHead().insertRow(0);
@@ -48,11 +147,17 @@ export class RENDER{
                 // headerRow.insertCell().outerHTML = `<th scope='col' class="W50PX"><div hlx-element='header' hlx-type='rows' hlx-value=''></div></th>`; // Row end header
         }
         renderTableBody(){
-                const tableBody = this.table.createTBody();
+                this.tableBody = this.table.createTBody();
                 for (let i = 0; i < this.visibleRows; i++) {
-                        const row = tableBody.insertRow()
+                        const row = this.tableBody.insertRow()
                         for (let j = 0; j <= this.Dataset.fields.length; j++) {row.insertCell()}
                 }
+        }
+        renderTableFooter(){
+                const tableFooter = this.table.createTFoot()
+                const row = tableFooter.insertRow()
+                row.insertCell() // row header
+                this.Dataset.fields.forEach(field => {const cell = row.insertCell()})
         }
         getTableContainer(){
                 return document.getElementById(`${this.tableContainer}`)
@@ -105,7 +210,7 @@ export class RENDER{
                                 const cells = this.Dataset.table.rows[rowIndex + 1].cells                       // +1 to account for the header row
                                         cells[0].outerHTML = `<th scope='row'><div hlx-element='rowHead' hlx-type='rowCounter'>${dataIndex + 1}</div></th>`; // row counter
                                         this.Dataset.fields.forEach((field, index) => {
-                                                let cellValue = this.Dataset.getValueByIndex(dataIndex,field)
+                                                let cellValue = this.Dataset.getValueByIndexField(dataIndex,field)
                                                 let groupHeaderTag = ``
                                                 let attr= false
                                                 if (field === this.Dataset.key && String(cellValue).includes(this.Dataset.groupHeaderTag)){

@@ -1,28 +1,24 @@
-import { data as originalData, dataTypes, dataCategories, fieldWidths as widths } from "./testData.js";
-import { RENDER } from "./classes/render.js";
-import { DATASET } from "./classes/dataset.js";
-import {EVENTS} from "./classes/tableEvents.js"
-import { slowScroll } from "./functions/throttle.js";
+import { data, dataTypes, dataCategories, fieldWidths as widths } from "./testData.js"
+import { RENDER } from "./classes/render.js"
+import { DATASET } from "./classes/dataset.js"
+import { EVENTS } from "./classes/tableEvents.js"
+import { PARSER } from "./classes/parser.js"
+import { CSS } from "./classes/css.js"
+import { slowScroll } from "./functions/throttle.js"
+import { resizeListener } from "./functions/listeners.js"
+import { CSSvars } from "./functions/definitions.js"
 
-const Dataset = new DATASET (originalData,Object.keys(originalData[0]),'id',dataTypes,dataCategories,widths,document.createElement("TABLE"),0) //0 = no data multiplying
-const Events = new EVENTS(Dataset);
-const Renderer = new RENDER(Dataset,Events,'tableContainer');
+const Dataset = new DATASET (data,Object.keys(data[0]),'id',dataTypes,dataCategories,widths,document.createElement("TABLE"),10) //0 = no data multiplying
+const Parser = new PARSER()
+const Events = new EVENTS(Dataset)
+const Renderer = new RENDER(Dataset,Events,'tableContainer')
+const HLX = new CSS()
+for(const variable in CSSvars){HLX.add(`--${variable}`,CSSvars[variable])}
+HLX.render()
+Renderer.setRowHeight(CSSvars.rowHeight)
 Events.setRenderer(Renderer)
+Events.setSlowScroll(slowScroll)
 Dataset.setRenderer(Renderer)
+Dataset.setParser(Parser)
 Renderer.populateViewport()
-
-// Scroll handling
-const scrollData = event => {
-        if (event.deltaX !== 0) return
-        event.preventDefault() // Prevent default scrolling
-        event.stopPropagation()
-        const scrollMultiplier = (event.ctrlKey || event.metaKey) && event.altKey ? 100 : event.ctrlKey || event.metaKey ? 10 : event.altKey ? 5 : 2;
-        let scrollAmount = (Math.sign(event.deltaY) * scrollMultiplier); // -1 for up, 1 for down * multiplier
-        event.shiftKey && (scrollAmount = slowScroll(scrollAmount)(Renderer.scrollDesceleration)) // slow scroll if shift pressed
-        Renderer.repopulateViewport(scrollAmount)
-}
-Renderer.getTableContainer().addEventListener( "wheel", scrollData)
-// Dataset.table.addEventListener( "click", (event)=>{
-//         event.stopPropagation();
-//         Events.handler
-// })
+resizeListener(Renderer)

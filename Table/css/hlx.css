@@ -3242,11 +3242,13 @@ section {background-color: white !important;}
 
 .NOSCROLLBAR {
     scrollbar-width: 0px !important;
+    scrollbar-height: 0px !important;
+    /* display: none !important; */
 }
 
 .NOSCROLLBAR::-webkit-scrollbar {
-    width: 0px !important;
-    /*display: none !important;*/
+    /* width: 0px !important; */
+    display: none !important;
 }
 
 
