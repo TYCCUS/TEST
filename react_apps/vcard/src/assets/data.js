@@ -21,8 +21,10 @@ export const data = {
         className:'H300PX FLEX-CENTER mb-3',
     },
     portraitProps:{
+        randomattr : 'this is a random attribute value',
         className:'SQUARE300PX',
-        src:'https://cdn.midjourney.com/faacd378-dc94-4ddd-853d-d550430ae173/0_1.png'
+        // src:'https://cdn.midjourney.com/faacd378-dc94-4ddd-853d-d550430ae173/0_1.png'
+        src:'h239.png'
     },
     headerDataProps:{
         className:'WR-100 BG-TRANSPARENT d-flex flex-column justify-content-start align-items-stretch mb-2',
@@ -111,6 +113,7 @@ export const data = {
     },
     footerProps:{
         className:'H50PX d-flex flex-row justify-content-center align-items-center flex-grow-0 flex-shrink-0',
+        onClick: ()=> console.log("footer clicked"),
         style:{
             backgroundColor:'#020810'
         }

@@ -1,7 +1,7 @@
 export default function Header(data){
         return(
                 <header {...data.headerProps}>
-                        <div {...data.headerImageProps}> 
+                        <div {...data.headerImageProps} onClick={ () => console.log('clicked') }> 
                                 <img {...data.portraitProps} />
                         </div>
                         <div {...data.headerDataProps}>
